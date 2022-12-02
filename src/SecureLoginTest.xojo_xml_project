@@ -146,10 +146,10 @@
   <ItemFlags>0</ItemFlags>
   <IsShared>0</IsShared>
  </Property>
- <PropertyVal Name="InterruptMessage">We are having trouble communicating with the server. Please wait a moment while we attempt to reconnect.</PropertyVal>
- <PropertyVal Name="DisconnectMessage">You have been disconnected from this application.</PropertyVal>
- <PropertyVal Name="ConfirmMessage"></PropertyVal>
  <PropertyVal Name="AllowTabOrderWrap">True</PropertyVal>
+ <PropertyVal Name="ConfirmMessage"></PropertyVal>
+ <PropertyVal Name="DisconnectMessage">You have been disconnected from this application.</PropertyVal>
+ <PropertyVal Name="InterruptMessage">We are having trouble communicating with the server. Please wait a moment while we attempt to reconnect.</PropertyVal>
  <ViewBehavior>
   <ViewProperty>
    <ObjName>ClientHeight</ObjName>
@@ -634,7 +634,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>2145927167</PartID>
+  <PartID>336928767</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -646,7 +646,7 @@
   <PropertyVal Name="FontSize">0.00</PropertyVal>
   <PropertyVal Name="Height">38</PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
-  <PropertyVal Name="Indicator"></PropertyVal>
+  <PropertyVal Name="Indicator">0</PropertyVal>
   <PropertyVal Name="Italic">False</PropertyVal>
   <PropertyVal Name="Left">113</PropertyVal>
   <PropertyVal Name="LockBottom">False</PropertyVal>
@@ -660,7 +660,6 @@
   <PropertyVal Name="Scope">0</PropertyVal>
   <PropertyVal Name="Super">WebLabel</PropertyVal>
   <PropertyVal Name="TabIndex">1</PropertyVal>
-  <PropertyVal Name="TabStop">True</PropertyVal>
   <PropertyVal Name="Text">Untitled</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">0</PropertyVal>
@@ -672,7 +671,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1171320831</PartID>
+  <PartID>363577343</PartID>
  </Control>
 </block>
 <block type="BuildAutomation" ID="283834041">
@@ -1052,7 +1051,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>346587135</PartID>
+  <PartID>831332351</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1089,7 +1088,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>740306943</PartID>
+  <PartID>515155967</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1126,7 +1125,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>572008447</PartID>
+  <PartID>1738434559</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1163,7 +1162,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>3</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1545263103</PartID>
+  <PartID>664446975</PartID>
  </Control>
  <Control>
   <ControlClass>WebCheckbox</ControlClass>
@@ -1194,7 +1193,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>4</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1051373567</PartID>
+  <PartID>376743935</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1226,7 +1225,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>5</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1410170879</PartID>
+  <PartID>690026495</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1258,7 +1257,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>6</ControlIndex>
   <Locked>0</Locked>
-  <PartID>221237247</PartID>
+  <PartID>1053882367</PartID>
  </Control>
 </block>
 <block type="WebView" ID="511214525">
@@ -1575,7 +1574,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1305225215</PartID>
+  <PartID>213286911</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1612,7 +1611,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1935474687</PartID>
+  <PartID>443893759</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1644,7 +1643,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1364832255</PartID>
+  <PartID>644964351</PartID>
  </Control>
 </block>
 <block type="BuildStepsList" ID="1331140607">
@@ -1685,7 +1684,6 @@
     <EditorIndex>0</EditorIndex>
     <EditorLocation></EditorLocation>
     <EditorPath></EditorPath>
-    <EditingPartID>511214525</EditingPartID>
     <EditorPath></EditorPath>
    </Editor>
    <SelectedTab>0</SelectedTab>
