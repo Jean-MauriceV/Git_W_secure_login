@@ -13,7 +13,7 @@
  <LongVersion></LongVersion>
  <InfoVersion></InfoVersion>
  <AutoIncVersion>0</AutoIncVersion>
- <DefaultViewID>511214525</DefaultViewID>
+ <DefaultViewID>1591815023</DefaultViewID>
  <ProjectType>3</ProjectType>
  <DefaultLanguage>0</DefaultLanguage>
  <CurrentLanguage>0</CurrentLanguage>
@@ -110,8 +110,10 @@
   <ItemSource>
    <TextEncoding>134217984</TextEncoding>
    <SourceLine>Sub Opening()</SourceLine>
-   <SourceLine>If Self.Secure Then</SourceLine>
-   <SourceLine>LoginPage.Show</SourceLine>
+   <SourceLine>If Self.Secure And Self.LoggedIn Then</SourceLine>
+   <SourceLine>mainPage.Show</SourceLine>
+   <SourceLine>Else</SourceLine>
+   <SourceLine>LoginPage.show</SourceLine>
    <SourceLine>End If</SourceLine>
    <SourceLine>End Sub</SourceLine>
   </ItemSource>
@@ -123,11 +125,11 @@
   <PartID>168945663</PartID>
   <ItemSource>
    <TextEncoding>134217984</TextEncoding>
-   <SourceLine>LoggedIn As Boolean</SourceLine>
+   <SourceLine>LoggedIn As Boolean = false</SourceLine>
    <SourceLine></SourceLine>
   </ItemSource>
   <TextEncoding>134217984</TextEncoding>
-  <ItemDeclaration>LoggedIn As Boolean</ItemDeclaration>
+  <ItemDeclaration>LoggedIn As Boolean = false</ItemDeclaration>
   <ItemFlags>0</ItemFlags>
   <IsShared>0</IsShared>
  </Property>
@@ -334,7 +336,7 @@
   <ItemSource>
    <TextEncoding>134217984</TextEncoding>
    <SourceLine>Sub Shown()</SourceLine>
-   <SourceLine>LoginDialog1.Show</SourceLine>
+   <SourceLine>//LoginDialog1.Show</SourceLine>
    <SourceLine>End Sub</SourceLine>
   </ItemSource>
  </HookInstance>
@@ -602,6 +604,24 @@
  <ControlBehavior>
   <Superclass>WebLabel</Superclass>
  </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>WebLabel</Superclass>
+ </ControlBehavior>
+ <ControlBehavior>
+  <Superclass>WebButton</Superclass>
+  <HookInstance>
+   <ItemName>Pressed</ItemName>
+   <Compatibility></Compatibility>
+   <Visible>1</Visible>
+   <PartID>837244927</PartID>
+   <ItemSource>
+    <TextEncoding>134217984</TextEncoding>
+    <SourceLine>Sub Pressed()</SourceLine>
+    <SourceLine>LoginDialog1.Show</SourceLine>
+    <SourceLine>End Sub</SourceLine>
+   </ItemSource>
+  </HookInstance>
+ </ControlBehavior>
  <Control>
   <ControlClass>LoginDialog</ControlClass>
   <ItemName>LoginDialog</ItemName>
@@ -633,7 +653,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>143380479</PartID>
+  <PartID>1199702015</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -643,11 +663,50 @@
   <PropertyVal Name="Enabled">True</PropertyVal>
   <PropertyVal Name="FontName"></PropertyVal>
   <PropertyVal Name="FontSize">0.00</PropertyVal>
-  <PropertyVal Name="Height">38</PropertyVal>
+  <PropertyVal Name="Height">67</PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="Indicator">0</PropertyVal>
   <PropertyVal Name="Italic">False</PropertyVal>
-  <PropertyVal Name="Left">113</PropertyVal>
+  <PropertyVal Name="Left">40</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockHorizontal">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="LockVertical">False</PropertyVal>
+  <PropertyVal Name="Multiline">True</PropertyVal>
+  <PropertyVal Name="Name">Label2</PropertyVal>
+  <PropertyVal Name="PanelIndex">0</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">WebLabel</PropertyVal>
+  <PropertyVal Name="TabIndex">2</PropertyVal>
+  <PropertyVal Name="TabStop">True</PropertyVal>
+  <PropertyVal Name="Text">This is the login page for your web app. In order to test secure login, you need to deploy this app on a server with an installed SSL certificate.</PropertyVal>
+  <PropertyVal Name="TextAlignment">0</PropertyVal>
+  <PropertyVal Name="TextColor">0</PropertyVal>
+  <PropertyVal Name="Tooltip"></PropertyVal>
+  <PropertyVal Name="Top">34</PropertyVal>
+  <PropertyVal Name="Underline">False</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">560</PropertyVal>
+  <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
+  <ControlIndex>1</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>172791807</PartID>
+ </Control>
+ <Control>
+  <ControlClass>WebLabel</ControlClass>
+  <ItemName>WebLabel</ItemName>
+  <PropertyVal Name="Bold">False</PropertyVal>
+  <PropertyVal Name="ControlID"></PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="FontName"></PropertyVal>
+  <PropertyVal Name="FontSize">0.00</PropertyVal>
+  <PropertyVal Name="Height">17</PropertyVal>
+  <PropertyVal Name="Index">-2147483648</PropertyVal>
+  <PropertyVal Name="Indicator">0</PropertyVal>
+  <PropertyVal Name="Italic">False</PropertyVal>
+  <PropertyVal Name="Left">40</PropertyVal>
   <PropertyVal Name="LockBottom">False</PropertyVal>
   <PropertyVal Name="LockHorizontal">False</PropertyVal>
   <PropertyVal Name="LockLeft">True</PropertyVal>
@@ -655,22 +714,58 @@
   <PropertyVal Name="LockTop">True</PropertyVal>
   <PropertyVal Name="LockVertical">False</PropertyVal>
   <PropertyVal Name="Multiline">False</PropertyVal>
-  <PropertyVal Name="Name">Label1</PropertyVal>
+  <PropertyVal Name="Name">LoginLabel</PropertyVal>
+  <PropertyVal Name="PanelIndex">0</PropertyVal>
   <PropertyVal Name="Scope">0</PropertyVal>
   <PropertyVal Name="Super">WebLabel</PropertyVal>
-  <PropertyVal Name="TabIndex">1</PropertyVal>
-  <PropertyVal Name="Text">Untitled</PropertyVal>
+  <PropertyVal Name="TabIndex">3</PropertyVal>
+  <PropertyVal Name="TabStop">True</PropertyVal>
+  <PropertyVal Name="Text">Vous n'êtes pas connecté..</PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">0</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
-  <PropertyVal Name="Top">245</PropertyVal>
+  <PropertyVal Name="Top">124</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
-  <PropertyVal Name="Width">395</PropertyVal>
+  <PropertyVal Name="Width">262</PropertyVal>
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
-  <ControlIndex>1</ControlIndex>
+  <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>345692159</PartID>
+  <PartID>1343270911</PartID>
+ </Control>
+ <Control>
+  <ControlClass>WebButton</ControlClass>
+  <ItemName>WebButton</ItemName>
+  <PropertyVal Name="AllowAutoDisable">False</PropertyVal>
+  <PropertyVal Name="Cancel">False</PropertyVal>
+  <PropertyVal Name="Caption">Connexion</PropertyVal>
+  <PropertyVal Name="ControlID"></PropertyVal>
+  <PropertyVal Name="Default">False</PropertyVal>
+  <PropertyVal Name="Enabled">True</PropertyVal>
+  <PropertyVal Name="Height">38</PropertyVal>
+  <PropertyVal Name="Index">-2147483648</PropertyVal>
+  <PropertyVal Name="Indicator">0</PropertyVal>
+  <PropertyVal Name="Left">379</PropertyVal>
+  <PropertyVal Name="LockBottom">False</PropertyVal>
+  <PropertyVal Name="LockHorizontal">False</PropertyVal>
+  <PropertyVal Name="LockLeft">True</PropertyVal>
+  <PropertyVal Name="LockRight">False</PropertyVal>
+  <PropertyVal Name="LockTop">True</PropertyVal>
+  <PropertyVal Name="LockVertical">False</PropertyVal>
+  <PropertyVal Name="Name">LoginButton</PropertyVal>
+  <PropertyVal Name="PanelIndex">0</PropertyVal>
+  <PropertyVal Name="Scope">0</PropertyVal>
+  <PropertyVal Name="Super">WebButton</PropertyVal>
+  <PropertyVal Name="TabIndex">4</PropertyVal>
+  <PropertyVal Name="TabStop">True</PropertyVal>
+  <PropertyVal Name="Tooltip"></PropertyVal>
+  <PropertyVal Name="Top">117</PropertyVal>
+  <PropertyVal Name="Visible">True</PropertyVal>
+  <PropertyVal Name="Width">100</PropertyVal>
+  <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
+  <ControlIndex>3</ControlIndex>
+  <Locked>0</Locked>
+  <PartID>483000319</PartID>
  </Control>
 </block>
 <block type="BuildAutomation" ID="283834041">
@@ -1050,7 +1145,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1397348351</PartID>
+  <PartID>2065805311</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1087,7 +1182,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1090299903</PartID>
+  <PartID>628508671</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1124,7 +1219,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1160466431</PartID>
+  <PartID>977203199</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1161,7 +1256,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>3</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1497798655</PartID>
+  <PartID>1924798463</PartID>
  </Control>
  <Control>
   <ControlClass>WebCheckbox</ControlClass>
@@ -1192,7 +1287,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>4</ControlIndex>
   <Locked>0</Locked>
-  <PartID>2003828735</PartID>
+  <PartID>787982335</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1224,7 +1319,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>5</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1340545023</PartID>
+  <PartID>1323229183</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1256,7 +1351,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>6</ControlIndex>
   <Locked>0</Locked>
-  <PartID>371695615</PartID>
+  <PartID>585463807</PartID>
  </Control>
 </block>
 <block type="WebView" ID="511214525">
@@ -1573,7 +1668,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>878524415</PartID>
+  <PartID>1790932991</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1610,7 +1705,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1257064447</PartID>
+  <PartID>1258102783</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1642,7 +1737,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1209763839</PartID>
+  <PartID>700346367</PartID>
  </Control>
 </block>
 <block type="BuildStepsList" ID="1331140607">
@@ -1678,13 +1773,20 @@
   <EditBounds><Rect left="0" top="25" width="1680" height="1025"/></EditBounds>
   <WindowMaximized>0</WindowMaximized>
   <Editors>
-   <EditorCount>1</EditorCount>
+   <EditorCount>2</EditorCount>
    <Editor>
     <EditorIndex>0</EditorIndex>
-    <EditorLocation>LoginPage.Opening</EditorLocation>
+    <EditorLocation>LoginPage.Controls.LoginButton.Pressed</EditorLocation>
     <EditorPath></EditorPath>
     <EditingPartID>1591815023</EditingPartID>
     <EditorPath></EditorPath>
+   </Editor>
+   <Editor>
+    <EditorIndex>1</EditorIndex>
+    <EditorLocation>LoginPage</EditorLocation>
+    <EditorPath>LoginPage.</EditorPath>
+    <EditingPartID>1591815023</EditingPartID>
+    <EditorPath>LoginPage.</EditorPath>
    </Editor>
    <SelectedTab>0</SelectedTab>
   </Editors>
