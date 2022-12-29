@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RBProject version="2022r3.2" FormatVersion="2" MinIDEVersion="20200200">
+<RBProject version="2022r4.1" FormatVersion="2" MinIDEVersion="20200200">
 <block type="Project" ID="0">
- <ProjectSavedInVers>2022.032</ProjectSavedInVers>
+ <ProjectSavedInVers>2022.041</ProjectSavedInVers>
  <IDEVersion>20220101</IDEVersion>
  <MajorVersion>1</MajorVersion>
  <MinorVersion>0</MinorVersion>
  <SubVersion>0</SubVersion>
  <Release>0</Release>
- <NonRelease>0</NonRelease>
+ <NonRelease>1</NonRelease>
  <Region></Region>
  <ShortVersion></ShortVersion>
  <LongVersion></LongVersion>
@@ -80,6 +80,7 @@
  <IncludePDB>0</IncludePDB>
  <WindowsVersions>{35138b9a-5d96-4fbd-8e2d-a2440225f93a}|{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}|{1f676c76-80e1-4239-95bb-83d0f6d0da78}|{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}</WindowsVersions>
  <WindowsRunAs>0</WindowsRunAs>
+ <MacMinimumVersion></MacMinimumVersion>
 </block>
 <block type="Module" ID="135439250">
  <ObjName>App</ObjName>
@@ -148,10 +149,10 @@
   <ItemFlags>0</ItemFlags>
   <IsShared>0</IsShared>
  </Property>
- <PropertyVal Name="InterruptMessage">Nous avons des problèmes à nous connecter au serveur. Veuillez attendre quelques instants pendant que nous réessayons ...</PropertyVal>
- <PropertyVal Name="DisconnectMessage">Vous avez été déconnecté(e) de l'application.</PropertyVal>
- <PropertyVal Name="ConfirmMessage"></PropertyVal>
  <PropertyVal Name="AllowTabOrderWrap">True</PropertyVal>
+ <PropertyVal Name="ConfirmMessage"></PropertyVal>
+ <PropertyVal Name="DisconnectMessage">Vous avez été déconnecté(e) de l'application.</PropertyVal>
+ <PropertyVal Name="InterruptMessage">Nous avons des problèmes à nous connecter au serveur. Veuillez attendre quelques instants pendant que nous réessayons ...</PropertyVal>
  <ViewBehavior>
   <ViewProperty>
    <ObjName>ClientHeight</ObjName>
@@ -685,7 +686,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>80787455</PartID>
+  <PartID>1568761855</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -711,7 +712,7 @@
   <PropertyVal Name="Scope">0</PropertyVal>
   <PropertyVal Name="Super">WebLabel</PropertyVal>
   <PropertyVal Name="TabIndex">2</PropertyVal>
-  <PropertyVal Name="Text"><Hex bytes="398">426F6E6A6F7572206365636920657374206C6120706167652064276964656E74696669636174696F6E206475207369746520776562206465206C2761646D696E697374726174696F6E2064657320686F7261697265732064752067726F75706520565A2E200A0A536920766F74726520636F6E6E6578696F6E206E6520666F6E6374696F6E6E65207061732065742071756520766F7573206465767269657A20792061766F697220616363C3A8732C20766F757320646576657A20656E766F79657220756E20636F75727269656C20C3A0206A6D76616E646572676F74656E4067726F757065767A2E636F6D0A0A536920766F757320C3AA74657320756E207574696C697361746575722C20766575696C6C657A20636C697175657220737572206C6520626F75746F6E207574696C697361746575722E20566F757320736572657A2072656469726967C3A92076657273206C652073697465207765622064657320686F72616972657320706F7572206C6573207574696C69736174657572732E0A0A4D657263690A0A4A4D5620</Hex></PropertyVal>
+  <PropertyVal Name="Text"><Hex bytes="427">426F6E6A6F7572206365636920657374206C6120706167652064276964656E74696669636174696F6E206475207369746520776562206465206C2761646D696E697374726174696F6E2064657320686F7261697265732064752067726F75706520565A2E200A0A536920766F74726520636F6E6E6578696F6E206E6520666F6E6374696F6E6E65207061732065742071756520766F7573206465767269657A20792061766F697220616363C3A8732C20766F757320646576657A20656E766F79657220756E20636F75727269656C20C3A0206A6D76616E646572676F74656E4067726F757065767A2E636F6D0A0A536920766F757320C3AA74657320756E207574696C69736174657572206574206E6F6E2070617320756E2061646D696E6973747261746575722C20766575696C6C657A20636C697175657220737572206C6520626F75746F6E207574696C697361746575722E20566F757320736572657A2072656469726967C3A92076657273206C652073697465207765622064657320686F72616972657320706F7572206C6573207574696C69736174657572732E0A0A4D657263690A0A4A4D5620</Hex></PropertyVal>
   <PropertyVal Name="TextAlignment">0</PropertyVal>
   <PropertyVal Name="TextColor">0</PropertyVal>
   <PropertyVal Name="Tooltip"></PropertyVal>
@@ -722,7 +723,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>601522175</PartID>
+  <PartID>271470591</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -759,14 +760,14 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>898181119</PartID>
+  <PartID>564443135</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
   <ItemName>WebButton</ItemName>
   <PropertyVal Name="AllowAutoDisable">False</PropertyVal>
   <PropertyVal Name="Cancel">False</PropertyVal>
-  <PropertyVal Name="Caption">Connexion</PropertyVal>
+  <PropertyVal Name="Caption">Administrateur</PropertyVal>
   <PropertyVal Name="ControlID"></PropertyVal>
   <PropertyVal Name="Default">False</PropertyVal>
   <PropertyVal Name="Enabled">True</PropertyVal>
@@ -791,7 +792,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>3</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1412145151</PartID>
+  <PartID>1555640319</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -823,7 +824,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>4</ControlIndex>
   <Locked>0</Locked>
-  <PartID>769546239</PartID>
+  <PartID>1119596543</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -833,7 +834,7 @@
   <PropertyVal Name="Enabled">True</PropertyVal>
   <PropertyVal Name="FontName"></PropertyVal>
   <PropertyVal Name="FontSize">0.00</PropertyVal>
-  <PropertyVal Name="Height">66</PropertyVal>
+  <PropertyVal Name="Height">53</PropertyVal>
   <PropertyVal Name="Index">-2147483648</PropertyVal>
   <PropertyVal Name="Indicator">0</PropertyVal>
   <PropertyVal Name="Italic">False</PropertyVal>
@@ -856,11 +857,11 @@
   <PropertyVal Name="Top">473</PropertyVal>
   <PropertyVal Name="Underline">False</PropertyVal>
   <PropertyVal Name="Visible">True</PropertyVal>
-  <PropertyVal Name="Width">626</PropertyVal>
+  <PropertyVal Name="Width">507</PropertyVal>
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>5</ControlIndex>
   <Locked>0</Locked>
-  <PartID>147595263</PartID>
+  <PartID>1946671103</PartID>
  </Control>
 </block>
 <block type="BuildAutomation" ID="283834041">
@@ -1249,7 +1250,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1106675711</PartID>
+  <PartID>1760485375</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1286,7 +1287,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>90200063</PartID>
+  <PartID>705492991</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1323,7 +1324,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>2100731903</PartID>
+  <PartID>210145279</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1360,7 +1361,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>3</ControlIndex>
   <Locked>0</Locked>
-  <PartID>6985727</PartID>
+  <PartID>429463551</PartID>
  </Control>
  <Control>
   <ControlClass>WebCheckbox</ControlClass>
@@ -1391,7 +1392,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>4</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1261672447</PartID>
+  <PartID>35469311</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1423,7 +1424,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>5</ControlIndex>
   <Locked>0</Locked>
-  <PartID>183476223</PartID>
+  <PartID>214413311</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1455,7 +1456,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>6</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1396273151</PartID>
+  <PartID>1406574591</PartID>
  </Control>
 </block>
 <block type="WebView" ID="511214525">
@@ -1772,7 +1773,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>727666687</PartID>
+  <PartID>1363902463</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1809,7 +1810,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1984514047</PartID>
+  <PartID>1935359999</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1841,7 +1842,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>906285055</PartID>
+  <PartID>1684320255</PartID>
  </Control>
 </block>
 <block type="BuildStepsList" ID="1331140607">
@@ -1874,15 +1875,15 @@
   <ItemData>0</ItemData>
  </WarningPreferences>
  <StudioWindowState>
-  <EditBounds><Rect left="0" top="25" width="1680" height="1170"/></EditBounds>
+  <EditBounds><Rect left="0" top="44" width="1680" height="1170"/></EditBounds>
   <WindowMaximized>0</WindowMaximized>
   <Editors>
    <EditorCount>2</EditorCount>
    <Editor>
     <EditorIndex>0</EditorIndex>
-    <EditorLocation>LoginDialog</EditorLocation>
+    <EditorLocation>LoginPage.Controls.VersionLabel</EditorLocation>
     <EditorPath></EditorPath>
-    <EditingPartID>1233721486</EditingPartID>
+    <EditingPartID>1591815023</EditingPartID>
     <EditorPath></EditorPath>
    </Editor>
    <Editor>
