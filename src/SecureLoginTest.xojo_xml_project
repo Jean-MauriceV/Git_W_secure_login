@@ -149,10 +149,10 @@
   <ItemFlags>0</ItemFlags>
   <IsShared>0</IsShared>
  </Property>
- <PropertyVal Name="AllowTabOrderWrap">True</PropertyVal>
- <PropertyVal Name="ConfirmMessage"></PropertyVal>
- <PropertyVal Name="DisconnectMessage">Vous avez été déconnecté(e) de l'application.</PropertyVal>
  <PropertyVal Name="InterruptMessage">Nous avons des problèmes à nous connecter au serveur. Veuillez attendre quelques instants pendant que nous réessayons ...</PropertyVal>
+ <PropertyVal Name="DisconnectMessage">Vous avez été déconnecté(e) de l'application.</PropertyVal>
+ <PropertyVal Name="ConfirmMessage"></PropertyVal>
+ <PropertyVal Name="AllowTabOrderWrap">True</PropertyVal>
  <ViewBehavior>
   <ViewProperty>
    <ObjName>ClientHeight</ObjName>
@@ -686,7 +686,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1568761855</PartID>
+  <PartID>517777407</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -723,7 +723,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>271470591</PartID>
+  <PartID>2089371647</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -760,7 +760,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>564443135</PartID>
+  <PartID>21145599</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -792,7 +792,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>3</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1555640319</PartID>
+  <PartID>550045695</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -824,7 +824,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>4</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1119596543</PartID>
+  <PartID>1014192127</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -861,7 +861,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>5</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1946671103</PartID>
+  <PartID>1246347263</PartID>
  </Control>
 </block>
 <block type="BuildAutomation" ID="283834041">
@@ -945,13 +945,13 @@
    <SourceLine>// Validate the values in the username and password fields to make sure this user</SourceLine>
    <SourceLine>// is allowed to log into your app.</SourceLine>
    <SourceLine></SourceLine>
-   <SourceLine>If UsernameField.Text = "jmva" And PasswordField.Text="7006" Then</SourceLine>
+   <SourceLine>If UsernameField.Text = "jmva" And HashThePassword(PasswordField.Text)="C8D633A66D92BA16A571B3944490A73453F81A35F8EAD0E810A8A241DB517A38" Then</SourceLine>
    <SourceLine></SourceLine>
    <SourceLine>Return True</SourceLine>
    <SourceLine></SourceLine>
    <SourceLine>Else </SourceLine>
    <SourceLine>Return False</SourceLine>
-   <SourceLine>end if</SourceLine>
+   <SourceLine>End If</SourceLine>
    <SourceLine>End Function</SourceLine>
   </ItemSource>
   <TextEncoding>134217984</TextEncoding>
@@ -961,6 +961,65 @@
   <ItemParams></ItemParams>
   <ItemResult>Boolean</ItemResult>
  </Method>
+ <Method>
+  <ItemName>HashThePassword</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1718337535</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>Function HashThePassword(password as string) As string</SourceLine>
+   <SourceLine>////Dim password As Text = PasswordField.Text.ToText</SourceLine>
+   <SourceLine>//Dim passwordData As Xojo.Core.MemoryBlock</SourceLine>
+   <SourceLine>//passwordData = Xojo.Core.TextEncoding.UTF8.ConvertTextToData(password)</SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>//Dim salt As Text = "salted"</SourceLine>
+   <SourceLine>//Dim saltData As Xojo.Core.MemoryBlock</SourceLine>
+   <SourceLine>//saltData = Xojo.Core.TextEncoding.UTF8.ConvertTextToData(salt)</SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>//Dim combinedData As New Xojo.Core.MutableMemoryBlock(passwordData)</SourceLine>
+   <SourceLine>//If Not salt.Empty Then</SourceLine>
+   <SourceLine>//combinedData.Append(saltData)</SourceLine>
+   <SourceLine>//End If</SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>//Dim hashData As Xojo.Core.MemoryBlock</SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>//hashData = Xojo.Crypto.PBKDF2(saltData, passwordData, 500, 32, Xojo.Crypto.HashAlgorithms.SHA256)</SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>//</SourceLine>
+   <SourceLine>//// Convert hashData to hex for display</SourceLine>
+   <SourceLine>//return ConvertToHex(hashData)</SourceLine>
+   <SourceLine>Var hash As MemoryBlock</SourceLine>
+   <SourceLine>hash = Crypto.PBKDF2("salted", password, 100, 32, Crypto.HashAlgorithms.SHA512)</SourceLine>
+   <SourceLine>Var hashValue As String = EncodeHex(hash)</SourceLine>
+   <SourceLine></SourceLine>
+   <SourceLine>Return hashValue</SourceLine>
+   <SourceLine>// FB8F64E66A72517AC7CA70145640B1932A986A7A7DDE7EC79602F8CE94DE0F8A</SourceLine>
+   <SourceLine>End Function</SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <AliasName></AliasName>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+  <ItemParams>password as string</ItemParams>
+  <ItemResult>string</ItemResult>
+ </Method>
+ <Property>
+  <ItemName>mPassword</ItemName>
+  <Compatibility></Compatibility>
+  <Visible>1</Visible>
+  <PartID>1519400959</PartID>
+  <ItemSource>
+   <TextEncoding>134217984</TextEncoding>
+   <SourceLine>mPassword As string = "6A9C1E745EEBD7A9687DF04FC61E5C4C685537EEB4A3384531DE5687270C9DF4"</SourceLine>
+   <SourceLine></SourceLine>
+  </ItemSource>
+  <TextEncoding>134217984</TextEncoding>
+  <ItemDeclaration>mPassword As string = "6A9C1E745EEBD7A9687DF04FC61E5C4C685537EEB4A3384531DE5687270C9DF4"</ItemDeclaration>
+  <ItemFlags>0</ItemFlags>
+  <IsShared>0</IsShared>
+ </Property>
  <PropertyVal Name="LayoutDirection">0</PropertyVal>
  <PropertyVal Name="Indicator">0</PropertyVal>
  <PropertyVal Name="TabIndex">0</PropertyVal>
@@ -1250,7 +1309,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1760485375</PartID>
+  <PartID>1341095935</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1287,7 +1346,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>705492991</PartID>
+  <PartID>1359890431</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1324,7 +1383,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>210145279</PartID>
+  <PartID>341848063</PartID>
  </Control>
  <Control>
   <ControlClass>WebTextField</ControlClass>
@@ -1361,7 +1420,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>3</ControlIndex>
   <Locked>0</Locked>
-  <PartID>429463551</PartID>
+  <PartID>932081663</PartID>
  </Control>
  <Control>
   <ControlClass>WebCheckbox</ControlClass>
@@ -1392,7 +1451,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>4</ControlIndex>
   <Locked>0</Locked>
-  <PartID>35469311</PartID>
+  <PartID>1353744383</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1424,7 +1483,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>5</ControlIndex>
   <Locked>0</Locked>
-  <PartID>214413311</PartID>
+  <PartID>1774725119</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1456,7 +1515,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>6</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1406574591</PartID>
+  <PartID>238295039</PartID>
  </Control>
 </block>
 <block type="WebView" ID="511214525">
@@ -1773,7 +1832,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>0</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1363902463</PartID>
+  <PartID>851283967</PartID>
  </Control>
  <Control>
   <ControlClass>WebLabel</ControlClass>
@@ -1810,7 +1869,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>1</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1935359999</PartID>
+  <PartID>2014402559</PartID>
  </Control>
  <Control>
   <ControlClass>WebButton</ControlClass>
@@ -1842,7 +1901,7 @@
   <PropertyVal Name="_mPanelIndex">-1</PropertyVal>
   <ControlIndex>2</ControlIndex>
   <Locked>0</Locked>
-  <PartID>1684320255</PartID>
+  <PartID>2131630079</PartID>
  </Control>
 </block>
 <block type="BuildStepsList" ID="1331140607">
@@ -1881,9 +1940,9 @@
    <EditorCount>2</EditorCount>
    <Editor>
     <EditorIndex>0</EditorIndex>
-    <EditorLocation>LoginPage.Controls.VersionLabel</EditorLocation>
+    <EditorLocation>LoginDialog.HashThePassword</EditorLocation>
     <EditorPath></EditorPath>
-    <EditingPartID>1591815023</EditingPartID>
+    <EditingPartID>1233721486</EditingPartID>
     <EditorPath></EditorPath>
    </Editor>
    <Editor>
